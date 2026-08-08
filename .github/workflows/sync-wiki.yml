@@ -27,4 +27,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPO: ${{ github.repository }}
-        run: node scripts/sync-docs-to-wiki.js
+        run: node scripts/workflows/sync-docs-to-wiki.js
