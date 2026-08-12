@@ -1,0 +1,30 @@
+name: Sync Docs to Wiki
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+    paths:
+      - 'docs/wiki/**/*.md'
+  workflow_dispatch: # 手動実行も可能
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Sync docs to Wiki
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+        run: node scripts/workflows/sync-docs-to-wiki.js

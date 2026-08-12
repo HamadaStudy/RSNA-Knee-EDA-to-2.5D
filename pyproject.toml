@@ -1,0 +1,24 @@
+[project]
+name = "rsna-knee-eda-to-2-5d"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.141.1",
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "kaggle>=2.2.4",
+    "kagglehub>=1.0.2",
+    "lightgbm>=4.7.0",
+    "marimo>=0.23.16",
+    "matplotlib>=3.11.1",
+    "mlflow>=1.27.0",
+    "numpy>=2.5.1",
+    "pandas>=3.0.5",
+    "psycopg2-binary>=2.9.12",
+    "pytest>=9.1.1",
+    "ruff>=0.16.2",
+    "scikit-learn>=1.9.0",
+    "uvicorn>=0.52.1",
+]
